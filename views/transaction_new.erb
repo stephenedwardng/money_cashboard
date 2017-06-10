@@ -1,6 +1,23 @@
 <form action="/transaction" method="post">
- <label for="type">Type:</label>
- <input type="text" id="type" name="type">
+ <label for="item">Item:</label>
+ <input type="text" id="item" name="item">
+
+ <label for="value">Value:</label>
+ <input type="number" id="value" name="value">
  
- <input type="submit" value="Add Tag">
+ <label for="merchant-select">Select a merchant:</label>
+ <select name="merchant_id" id="merchant-select">
+  <% for merchant in @merchants %>
+   <option value="<%= merchant.id %>"><%= merchant.name %></option>
+  <% end %>
+ </select>
+
+ <label for="tag-select">Select a tag:</label>
+ <select name="tag_id" id="tag-select">
+  <% for tag in @tags %>
+   <option value="<%= tag.id %>"><%= tag.type %></option>
+  <% end %>
+ </select>
+
+ <input type="submit" value="Add Transaction">
 </form>

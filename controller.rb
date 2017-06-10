@@ -91,6 +91,8 @@ get '/transaction' do
 end
 
 get '/transaction/new' do
+  @merchants = Merchant.all()
+  @tags = Tag.all()
   erb(:transaction_new)
 end
 
