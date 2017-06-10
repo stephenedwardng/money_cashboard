@@ -69,6 +69,7 @@ Tag.delete_all()
 @tag5.save()
 
 @transaction1 = Transaction.new({
+  'item' => 'Pie',
   'value' => 60,
   'merchant_id' => @merchant1.id,
   'tag_id' => @tag1.id
@@ -77,6 +78,7 @@ Tag.delete_all()
 @transaction1.save()
 
 @transaction2 = Transaction.new({
+  'item' => 'Jeans',
   'value' => 30,
   'merchant_id' => @merchant2.id,
   'tag_id' => @tag2.id
@@ -85,6 +87,7 @@ Tag.delete_all()
 @transaction2.save()
 
 @transaction3 = Transaction.new({
+  'item' => 'Electricity',
   'value' => 80,
   'merchant_id' => @merchant3.id,
   'tag_id' => @tag3.id
@@ -93,6 +96,7 @@ Tag.delete_all()
 @transaction3.save()
 
 @transaction4 = Transaction.new({
+  'item' => 'Pen',
   'value' => 50,
   'merchant_id' => @merchant4.id,
   'tag_id' => @tag4.id
@@ -101,6 +105,7 @@ Tag.delete_all()
 @transaction4.save()
 
 @transaction5 = Transaction.new({
+  'item' => 'Pizza',
   'value' => 10,
   'merchant_id' => @merchant5.id,
   'tag_id' => @tag5.id

@@ -2,10 +2,10 @@
 
 <p><a href="/transaction/new">Add Transaction</a></p>
 <% for transaction in @transactions %>
-<p>Type: <%= transaction.item() %></p>
-<p>Type: <%= transaction.value() %></p>
-<p>Type: <%= transaction.merchant_id() %></p>
-<p>Type: <%= transaction.tag_id() %></p>
-<p><a href="/tag/<%= transaction.id %>">Show Transaction Details</a></p>
+<p>Item: <%= transaction.item() %></p>
+<p>Value: £<%= transaction.value() %></p>
+<p>Merchant: <%= transaction.merchant_id() %></p>
+<p>Tag: <%= transaction.tag_id() %></p>
+<p><a href="/transaction/<%= transaction.id %>">Show Transaction Details</a></p>
 <hr />
 <% end %>

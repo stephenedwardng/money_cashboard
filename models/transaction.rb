@@ -24,7 +24,7 @@ class Transaction
   def self.all()
     sql = "SELECT * FROM transactions;"
     transactions = SqlRunner.run(sql)
-    result = transactions.map{|tag| Transactions.new(transaction)}
+    result = transactions.map{|transaction| Transaction.new(transaction)}
     return result
   end
 
@@ -35,7 +35,7 @@ class Transaction
     return result
   end
 
-  def update()
+  def update(options)
     sql = "UPDATE tags SET (item, value, merchant_id, tag_id) = ('#{@item}', #{@value}, #{merchant_id}, #{tag_id}) WHERE id = #{@id};"
     SqlRunner.run(sql)
   end

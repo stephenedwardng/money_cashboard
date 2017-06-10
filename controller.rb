@@ -108,6 +108,8 @@ post '/transaction' do
 end
 
 get '/transaction/:id/edit' do 
+  @merchants = Merchant.all()
+  @tags = Tag.all()
   @transaction = Transaction.find(params[:id])
   erb(:transaction_edit)
 end
