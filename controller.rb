@@ -12,6 +12,7 @@ get '/merchant' do
 end
 
 get '/merchant/new' do
+  @tags = Tag.all()
   erb(:merchant_new)
 end
 
