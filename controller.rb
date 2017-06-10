@@ -12,7 +12,6 @@ get '/merchant' do
 end
 
 get '/merchant/new' do
-  #@houses = House.all()
   erb(:merchant_new)
 end
 
