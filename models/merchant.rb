@@ -5,7 +5,7 @@ class Merchant
   attr_accessor :id, :name
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'].to_i()
     @name = options['name']
   end
 
@@ -19,7 +19,7 @@ class Merchant
   def self.all()
     sql = "SELECT * FROM merchants;"
     merchants = SqlRunner.run(sql)
-    result = merchants.map{|merchant| Merchant.new(merchants)}
+    result = merchants.map{|merchant| Merchant.new(merchant)}
     return result
   end
 

@@ -17,5 +17,5 @@ CREATE TABLE transactions (
  item VARCHAR(255),
  value INT2,
  merchant_id INT8 REFERENCES merchants(id),
- tag_id INT8 REFERENCES tag(id)
+ tag_id INT8 REFERENCES tags(id)
 );
