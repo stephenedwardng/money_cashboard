@@ -19,7 +19,7 @@ class Tag
   def self.all()
     sql = "SELECT * FROM tags;"
     tags = SqlRunner.run(sql)
-    result = tags.map{|tag| Tag.new(tags)}
+    result = tags.map{|tag| Tag.new(tag)}
     return result
   end
 
@@ -30,7 +30,7 @@ class Tag
     return result
   end
 
-  def update()
+  def update(options)
     sql = "UPDATE tags SET (type) = ('#{@type}') WHERE id = #{@id};"
     SqlRunner.run(sql)
   end
