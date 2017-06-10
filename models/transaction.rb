@@ -24,7 +24,7 @@ class Transaction
   def self.all()
     sql = "SELECT * FROM transactions;"
     transactions = SqlRunner.run(sql)
-    result = transactions.map{|tag| Transactions.new(transactions)}
+    result = transactions.map{|tag| Transactions.new(transaction)}
     return result
   end
 

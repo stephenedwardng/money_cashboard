@@ -85,4 +85,39 @@ end
 
 # Transaction routes
 
+get '/transaction' do
+  @transactions = Transaction.all()
+  erb(:transaction_index)
+end
 
+get '/transaction/new' do
+  erb(:transaction_new)
+end
+
+get '/transaction/:id' do
+  @transaction = Transaction.find(params[:id])
+  erb(:transaction_show)
+end
+
+post '/transaction' do
+  @transaction = Transaction.new(params)
+  @transaction.save()
+  erb(:transaction_create)
+end
+
+get '/transaction/:id/edit' do 
+  @transaction = Transaction.find(params[:id])
+  erb(:transaction_edit)
+end
+
+post '/transaction/:id' do
+  @transaction = Transaction.find(params[:id])
+  @transaction.update(params)
+  redirect to "/transaction/#{params[:id]}"
+end
+
+post '/transaction/:id/delete' do
+  @transaction = Transaction.find(params[:id])
+  @transaction.delete()
+  redirect to "/transaction"
+end
