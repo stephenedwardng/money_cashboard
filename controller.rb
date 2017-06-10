@@ -12,7 +12,6 @@ get '/merchant' do
 end
 
 get '/merchant/new' do
-  @tags = Tag.all()
   erb(:merchant_new)
 end
 
@@ -24,5 +23,24 @@ end
 post '/merchant' do
   @merchant = Merchant.new(params)
   @merchant.save()
-  erb(:create)
+  erb(:merchant_create)
 end
+
+get '/merchant/:id/edit' do 
+  @merchant = Merchant.find(params[:id])
+  erb(:merchant_edit)
+end
+
+post '/merchant/:id' do
+  @merchant = Merchant.find(params[:id])
+  @merchant.update(params)
+  redirect to "/merchant/#{params[:id]}"
+end
+
+post '/merchant/:id/delete' do
+  @merchant = Merchant.find(params[:id])
+  @merchant.delete()
+  redirect to "/merchant"
+end
+
+
