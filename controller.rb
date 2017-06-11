@@ -48,6 +48,7 @@ end
 
 get '/tag' do
   @tags = Tag.all()
+  # @tag_spent = Tag.spent(params[:id])
   erb(:tag_index)
 end
 

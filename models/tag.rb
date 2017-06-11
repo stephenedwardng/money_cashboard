@@ -45,4 +45,15 @@ class Tag
     SqlRunner.run(sql)
   end
 
+  # def self.spent(options)
+  #   sql = "SELECT SUM(value)
+  #     FROM transactions 
+  #     INNER JOIN tags
+  #     ON transactions.tag_id = tags.id
+  #     WHERE tags.id = 1;"
+  #   spent = SqlRunner.run(sql)
+  #   return spent[0]['sum']
+  # end
+
+
 end
