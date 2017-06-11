@@ -72,9 +72,7 @@ class Transaction
     sql = "SELECT SUM(value)
       FROM transactions;"
     total = SqlRunner.run(sql)
-    return total[0]
-    #result = transactions.map{|transaction| Transaction.new(transaction)}
-    #return result
+    return total
   end
 
 end
