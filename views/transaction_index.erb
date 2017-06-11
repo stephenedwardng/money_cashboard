@@ -1,16 +1,19 @@
-<h2>Dashboard</h2>
-<p>Total spent: £<%= @total_spent %></p>
-<p>Status: <%= @warning_message %></p>
+<div class="dashboard">
+  <h2>Dashboard</h2>
+  <p>Total spent: £<%= @total_spent %></p>
+  <p>Status: <%= @warning_message %></p>
+  <p><a href="/transaction/new">Add Transaction</a></p>
+</div>
 
+<div class="main">
+  <h3>All Transactions</h3>
 
-<h2>All Transactions</h2>
-
-<p><a href="/transaction/new">Add Transaction</a></p>
-<% for transaction in @transactions %>
-<p>Item: <%= transaction.item() %></p>
-<p>Value: £<%= transaction.value() %></p>
-<p>Merchant: <%= transaction.merchant.name() %></p>
-<p>Tag: <%= transaction.tag.type() %></p>
-<p><a href="/transaction/<%= transaction.id %>">Show Transaction Details</a></p>
-<hr />
-<% end %>
+  <% for transaction in @transactions %>
+  <p>Item: <%= transaction.item() %></p>
+  <p>Value: £<%= transaction.value() %></p>
+  <p>Merchant: <%= transaction.merchant.name() %></p>
+  <p>Tag: <%= transaction.tag.type() %></p>
+  <p><a href="/transaction/<%= transaction.id %>">Show Transaction Details</a></p>
+  <hr />
+  <% end %>
+</div>

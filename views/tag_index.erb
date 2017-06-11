@@ -1,9 +1,14 @@
-<h2>All Tags</h2>
+<div class="dashboard">
+  <p><a href="/tag/new">Add Tag</a></p>
+</div>
 
-<p><a href="/tag/new">Add Tag</a></p>
-<% for tag in @tags %>
-<p>Type: <%= tag.type() %></p>
-<!-- <p>Amount spent on tag: £ ruby @tag_spent() ruby </p> -->
-<p><a href="/tag/<%= tag.id %>">Show Tag Details</a></p>
-<hr />
-<% end %>
+<div class="main">
+  <h3>All Tags</h3>
+
+  <% for tag in @tags %>
+  <p>Type: <%= tag.type() %></p>
+  <!-- <p>Amount spent on tag: £ ruby @tag_spent() ruby </p> -->
+  <p><a href="/tag/<%= tag.id %>">Show Tag Details</a></p>
+  <hr />
+  <% end %>
+</div>

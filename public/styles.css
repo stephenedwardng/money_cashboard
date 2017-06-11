@@ -1,0 +1,103 @@
+body {
+  background-color: #F2F0DF;
+  font-family: helvetica, verdana, sans-serif;
+
+}
+
+h1 {
+  color: #6e7e62;
+  font-family: helvetica, verdana, sans-serif;
+  font-weight: lighter;
+}
+
+h2 {
+  color: #ffffff;
+  background-color: #a9c1d9;
+  font-family: helvetica, verdana, sans-serif;
+
+}
+
+h3 {
+  color: #607890;
+  background-color: inherit;
+  font-family: helvetica, verdana, sans-serif;
+
+}
+
+p {
+  color: #607890;
+  font-family: helvetica, verdana, sans-serif;
+}
+
+a {
+  color: #607890;
+  font-family: helvetica, verdana, sans-serif;
+}
+
+a:hover {
+  color: #8098b0;
+}
+
+a:visited {
+  color: #607890;
+}
+
+hr {
+  color: #607890;
+  background-color: #607890; 
+}
+
+nav {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
+  text-align: right;
+}
+
+
+
+.dashboard {
+  background-color: #a9c1d9;
+  padding: 10px 20px;
+  margin: 0px;
+}
+
+.main {
+  background-color: #caccb6;
+  padding: 10px 20px;
+  margin: 0px;
+}
+
+.grid {
+  border: 0px solid #caccb6;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.cell {
+  flex: 1;
+  border: 0px solid #caccb6;
+  padding: 10px;
+  min-height: 15vh;
+}
+
+@media all and (min-width: 480px){
+  .grid-row-sm {
+    flex-direction: row;
+  }
+}
+
+@media all and (min-width: 720px) {
+  .grid-row-md {
+    flex-direction: row;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .grid-row-md {
+    flex-direction: row;
+  }
+}

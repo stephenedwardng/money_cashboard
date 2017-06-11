@@ -1,8 +1,12 @@
-<h2>All Merchants</h2>
+<div class="dashboard">
+  <p><a href="/merchant/new">Add Merchant</a></p>
+</div>
+<div class="main">
+  <h3>All Merchants</h3>
 
-<p><a href="/merchant/new">Add Merchant</a></p>
-<% for merchant in @merchants %>
-<p>Name: <%= merchant.name() %></p>
-<p><a href="/merchant/<%= merchant.id %>">Show Merchant Details</a></p>
-<hr />
-<% end %>
+  <% for merchant in @merchants %>
+  <p>Name: <%= merchant.name() %></p>
+  <p><a href="/merchant/<%= merchant.id %>">Show Merchant Details</a></p>
+  <hr />
+  <% end %>
+</div>
