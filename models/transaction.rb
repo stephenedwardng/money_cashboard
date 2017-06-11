@@ -72,7 +72,7 @@ class Transaction
     sql = "SELECT SUM(value)
       FROM transactions;"
     total = SqlRunner.run(sql)
-    return total
+    return total[0]['sum']
   end
 
 end
