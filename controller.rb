@@ -86,6 +86,8 @@ end
 # Transaction routes
 
 get '/transaction' do
+  @merchants = Merchant.all()
+  @tags = Tag.all()
   @transactions = Transaction.all()
   erb(:transaction_index)
 end
