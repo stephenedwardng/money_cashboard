@@ -50,4 +50,22 @@ class Transaction
     SqlRunner.run(sql)
   end
 
+  def merchant()
+    sql = "SELECT * FROM merchants m
+          INNER JOIN transactions t
+          ON t.merchant_id = m.id
+          WHERE m.id = #{@merchant_id};"
+    results = SqlRunner.run(sql)
+    return Merchant.new(results.first)
+  end
+
+  def tag()
+    sql = "SELECT * FROM tags tg
+          INNER JOIN transactions t
+          ON t.tag_id = tg.id
+          WHERE tg.id = #{@tag_id};"
+    results = SqlRunner.run(sql)
+    return Tag.new(results.first)
+  end
+
 end

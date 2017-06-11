@@ -1,7 +1,7 @@
 <p>Item: <%= @transaction.item() %></p>
 <p>Value: £<%= @transaction.value() %></p>
-<p>Merchant: <%= @transaction.merchant_id() %></p>
-<p>Tag: <%= @transaction.tag_id() %></p>
+<p>Merchant: <%= @transaction.merchant.name() %></p>
+<p>Tag: <%= @transaction.tag.type() %></p>
 
 <p><a href="/transaction/<%= @transaction.id %>/edit">Edit Transaction</a></p>
 
