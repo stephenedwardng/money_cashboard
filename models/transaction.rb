@@ -75,4 +75,18 @@ class Transaction
     return total[0]['sum']
   end
 
+  def self.budget()
+    return 1000.to_i()
+  end
+
+  def self.warning()
+    if total_spent().to_i <= budget().to_i
+      return "You are under budget"
+    elsif total_spent().to_i >= budget().to_i
+      return "You are over budget"
+    else
+      return "Budget not set"
+    end
+  end
+
 end

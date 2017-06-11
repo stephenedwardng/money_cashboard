@@ -91,6 +91,7 @@ get '/transaction' do
   @tags = Tag.all()
   @transactions = Transaction.all()
   @total_spent = Transaction.total_spent()
+  @warning_message = Transaction.warning()
   erb(:transaction_index)
 end
 
