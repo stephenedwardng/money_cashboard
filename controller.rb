@@ -89,6 +89,7 @@ get '/transaction' do
   @merchants = Merchant.all()
   @tags = Tag.all()
   @transactions = Transaction.all()
+  @total_spent = Transaction.total_spent()
   erb(:transaction_index)
 end
 

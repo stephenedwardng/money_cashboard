@@ -69,11 +69,12 @@ class Transaction
   end
 
   def self.total_spent()
-    sql = "SELECT value FROM transactions;"
-    transactions = SqlRunner.run(sql)
-    result = transactions.map{|transaction| Transaction.new(transaction)}
-    return result
+    sql = "SELECT SUM(value)
+      FROM transactions;"
+    total = SqlRunner.run(sql)
+    return total[0]
+    #result = transactions.map{|transaction| Transaction.new(transaction)}
+    #return result
   end
-
 
 end
