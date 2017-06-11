@@ -68,4 +68,12 @@ class Transaction
     return Tag.new(results.first)
   end
 
+  def self.total_spent()
+    sql = "SELECT value FROM transactions;"
+    transactions = SqlRunner.run(sql)
+    result = transactions.map{|transaction| Transaction.new(transaction)}
+    return result
+  end
+
+
 end
