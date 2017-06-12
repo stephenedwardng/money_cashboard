@@ -1,0 +1,13 @@
+<div class="main">
+  <h3>Transactions by Month</h3>
+
+  <% for transaction in @transactions_by_month %>
+  <p>Item: <%= transaction.item() %></p>
+  <p>Value: £<%= transaction.value() %></p>
+  <p>Merchant: <%= transaction.merchant.name() %></p>
+  <p>Tag: <%= transaction.tag.type() %></p>
+  <p>Date: <%= transaction.format_date() %></p>
+  <p><a href="/transaction/<%= transaction.id %>">Show Transaction Details</a></p>
+  <hr />
+  <% end %>
+</div>

@@ -96,4 +96,13 @@ class Transaction
     return "#{formatted_date.strftime('%a %d %b %Y')}"
   end
 
+  def self.all_by_month()
+    sql = "SELECT * FROM transactions
+    WHERE EXTRACT (month from date_of_transaction)=6;"
+    transactions = SqlRunner.run(sql)
+    result = transactions.map{|transaction| Transaction.new(transaction)}
+    return result
+  end
+
+
 end
