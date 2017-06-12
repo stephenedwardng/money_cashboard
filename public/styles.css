@@ -9,6 +9,7 @@ h1 {
   color: #8dd9f1;
   font-family: helvetica, verdana, sans-serif;
   font-weight: lighter;
+  margin-bottom: 50px;
 }
 
 h2 {
@@ -82,19 +83,53 @@ nav {
   transition: all 200ms ease;
 }
 
+.hero-bg {
+  width: auto;
+  min-height: 140px;
+  margin: 0px 10px;
+  padding-top: 50px;
+  background-image: url(../banner-bluescreen-1400.jpg);
+}
+
+.tagline {
+  display: inline;
+  color: #ffffff;
+  background-color: #8dd9f1;
+  padding: 10px;
+  margin-left: 50px;
+}
+
 .dashboard {
   color: #ffffff;
-  background-color: #6db9d1;
+  background-color: #8dd9f1;
   padding: 10px 20px;
   margin: 0px;
 }
 
 .dashboard p {
   color: #ffffff;
+  font-size: large;
+  font-weight: bold;
 }
 
 .dashboard a {
   color: #ffffff;
+}
+
+.logo {
+  color: #ffffff;
+  background-color: #8dd9f1;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 10px 14px;
+  border-radius: 5px;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: none;
 }
 /*
 4d99b1
