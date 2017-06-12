@@ -48,7 +48,6 @@ end
 
 get '/tag' do
   @tags = Tag.all()
-  # @spent_by_tag = Tag.spent_by_tag()
   erb(:tag_index)
 end
 

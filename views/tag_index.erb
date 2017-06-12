@@ -7,7 +7,6 @@
 
   <% for tag in @tags %>
   <p>Type: <%= tag.type() %></p>
-  <!-- <p>Amount spent by tag: £ ruby @spent_by_tag ruby </p>  -->
   <p><a href="/tag/<%= tag.id %>">Show Tag Details</a></p>
   <hr />
   <% end %>

@@ -4,7 +4,7 @@ require_relative('./tag')
 
 class Transaction
 
-  attr_accessor :id, :item, :value, :merchant_id, :tag_id
+  attr_accessor :id, :item, :value, :merchant_id, :tag_id, :date_of_transaction
 
   def initialize(options)
     @id = options['id'].to_i()
@@ -12,11 +12,12 @@ class Transaction
     @value = options['value'].to_i()
     @merchant_id = options['merchant_id'].to_i()
     @tag_id = options['tag_id'].to_i()
+    @date_of_transaction = options['date_of_transaction']
   end
 
   def save()
-    sql = "INSERT INTO transactions (item, value, merchant_id, tag_id)
-    VALUES ('#{@item}', #{@value}, #{merchant_id}, #{tag_id}) RETURNING *;"
+    sql = "INSERT INTO transactions (item, value, merchant_id, tag_id, date_of_transaction)
+    VALUES ('#{@item}', #{@value}, #{merchant_id}, #{tag_id}, '#{date_of_transaction}') RETURNING *;"
     transaction_data = SqlRunner.run(sql)
     @id = transaction_data.first['id'].to_i()
   end
@@ -36,7 +37,7 @@ class Transaction
   end
 
   def update(options)
-    sql = "UPDATE tags SET (item, value, merchant_id, tag_id) = ('#{@item}', #{@value}, #{merchant_id}, #{tag_id}) WHERE id = #{@id};"
+    sql = "UPDATE tags SET (item, value, merchant_id, tag_id, date_of_transaction) = ('#{@item}', #{@value}, #{merchant_id}, #{tag_id}, '#{date_of_transaction}') WHERE id = #{@id};"
     SqlRunner.run(sql)
   end
 

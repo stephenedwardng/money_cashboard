@@ -72,7 +72,8 @@ Tag.delete_all()
   'item' => 'Pie',
   'value' => 60,
   'merchant_id' => @merchant1.id,
-  'tag_id' => @tag1.id
+  'tag_id' => @tag1.id,
+  'date_of_transaction' => '2017-06-11'
   })
 
 @transaction1.save()
@@ -81,7 +82,8 @@ Tag.delete_all()
   'item' => 'Jeans',
   'value' => 30,
   'merchant_id' => @merchant2.id,
-  'tag_id' => @tag2.id
+  'tag_id' => @tag2.id,
+  'date_of_transaction' => '2017-05-15'
   })
 
 @transaction2.save()
@@ -90,7 +92,8 @@ Tag.delete_all()
   'item' => 'Electricity',
   'value' => 80,
   'merchant_id' => @merchant3.id,
-  'tag_id' => @tag3.id
+  'tag_id' => @tag3.id,
+  'date_of_transaction' => '2017-05-06'
   })
 
 @transaction3.save()
@@ -99,7 +102,8 @@ Tag.delete_all()
   'item' => 'Pen',
   'value' => 50,
   'merchant_id' => @merchant4.id,
-  'tag_id' => @tag4.id
+  'tag_id' => @tag4.id,
+  'date_of_transaction' => '2017-06-08'
   })
 
 @transaction4.save()
@@ -108,7 +112,8 @@ Tag.delete_all()
   'item' => 'Pizza',
   'value' => 10,
   'merchant_id' => @merchant5.id,
-  'tag_id' => @tag5.id
+  'tag_id' => @tag5.id,
+  'date_of_transaction' => '2017-04-20'
   })
 
 @transaction5.save()
