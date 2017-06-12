@@ -1,50 +1,55 @@
 body {
-  background-color: #F2F0DF;
+  background-color: #ffffff;
   font-family: helvetica, verdana, sans-serif;
+  color: #333333;
 
 }
 
 h1 {
-  color: #6e7e62;
+  color: #8dd9f1;
   font-family: helvetica, verdana, sans-serif;
   font-weight: lighter;
 }
 
 h2 {
   color: #ffffff;
-  background-color: #a9c1d9;
   font-family: helvetica, verdana, sans-serif;
 
 }
 
 h3 {
-  color: #607890;
+  color: #8dd9f1;
   background-color: inherit;
   font-family: helvetica, verdana, sans-serif;
 
 }
 
 p {
-  color: #607890;
+  color: #4d99b1;
   font-family: helvetica, verdana, sans-serif;
 }
 
 a {
-  color: #607890;
+  color: #7dc9e1;
   font-family: helvetica, verdana, sans-serif;
 }
 
 a:hover {
-  color: #8098b0;
+  color: #4d99bf;
 }
 
 a:visited {
-  color: #607890;
+  color: #7dc9e1;
 }
 
 hr {
-  color: #607890;
-  background-color: #607890; 
+  color: #6db9d1;
+  background-color: #6db9d1;     
+  height: 0px;
+  border: 0;
+  border-top: 1px dotted #6db9d1;
+  margin: 1em 0;
+  padding: 0; 
 }
 
 nav {
@@ -52,20 +57,57 @@ nav {
   margin: 0px;
   padding-right: 25px;
   text-align: right;
+
 }
 
-
+.nav-link {
+  color: #7dc9e1;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 10px 14px;
+  border-radius: 5px;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  color: #6293a4;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: none;
+  background-color: #ffffff;
+}
+.nav-link:hover {
+  background-color: #bdf9ff;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
 
 .dashboard {
-  background-color: #a9c1d9;
+  color: #ffffff;
+  background-color: #6db9d1;
   padding: 10px 20px;
   margin: 0px;
 }
 
+.dashboard p {
+  color: #ffffff;
+}
+
+.dashboard a {
+  color: #ffffff;
+}
+/*
+4d99b1
+6db9d1
+6293a4
+7dc9e1
+8dd9f1
+*/
 .main {
-  background-color: #caccb6;
+  background-color: #ffffff;
   padding: 10px 20px;
   margin: 0px;
+  border: 1px solid #6db9d1;
 }
 
 .grid {
