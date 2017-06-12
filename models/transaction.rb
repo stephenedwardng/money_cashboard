@@ -10,7 +10,7 @@ class Transaction
   def initialize(options)
     @id = options['id'].to_i()
     @item = options['item']
-    @value = options['value'].to_i()
+    @value = options['value'].to_f()
     @merchant_id = options['merchant_id'].to_i()
     @tag_id = options['tag_id'].to_i()
     @date_of_transaction = options['date_of_transaction']

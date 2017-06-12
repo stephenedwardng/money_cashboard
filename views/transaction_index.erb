@@ -1,6 +1,6 @@
 <div class="dashboard">
   <h2>Dashboard</h2>
-  <p>Total spent: £<%= @total_spent %></p>
+  <p>Total spent: £<%= sprintf('%.2f', @total_spent) %></p>
   <p>Status: <%= @warning_message %></p>
   <p><a href="/transaction/new">Add Transaction</a></p>
 </div>
@@ -10,7 +10,7 @@
 
   <% for transaction in @transactions %>
   <p>Item: <%= transaction.item() %></p>
-  <p>Value: £<%= transaction.value() %></p>
+  <p>Value: £<%= sprintf('%.2f', transaction.value()) %></p>
   <p>Merchant: <%= transaction.merchant.name() %></p>
   <p>Tag: <%= transaction.tag.type() %></p>
   <p>Date: <%= transaction.format_date() %></p>
