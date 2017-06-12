@@ -1,6 +1,7 @@
 require_relative('../db/sql_runner')
 require_relative('./merchant')
 require_relative('./tag')
+require('date')
 
 class Transaction
 
@@ -88,6 +89,11 @@ class Transaction
     else
       return "Budget not set"
     end
+  end
+
+  def format_date()
+    formatted_date = Date.parse(@date_of_transaction)
+    return "#{formatted_date.strftime('%a %d %b %Y')}"
   end
 
 end
