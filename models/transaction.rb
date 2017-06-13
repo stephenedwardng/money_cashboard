@@ -157,8 +157,8 @@ class Transaction
         number: 11
       },
       {
-        capital: "December",
-        population: 12
+        name: "December",
+        number: 12
       }
     ]
 
