@@ -134,7 +134,7 @@ end
 # month routes
 
 get '/month' do
-  @transactions_by_month = Transaction.all_by_month()
+  @months = Transaction.list_months()
   @merchants = Merchant.all()
   @tags = Tag.all()
   @transactions = Transaction.all()
