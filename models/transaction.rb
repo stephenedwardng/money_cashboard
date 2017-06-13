@@ -89,6 +89,11 @@ class Transaction
     return 1000.to_i()
   end
 
+  def self.progress_bar()
+    progress_bar =  (total_spent().to_f / budget().to_f) * 100
+    return progress_bar.to_i
+  end
+
   def self.warning()
     if total_spent().to_i <= budget().to_i
       return "You are under budget"

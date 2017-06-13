@@ -3,12 +3,22 @@
 <div class="grid">
    <div class="grid-row grid-row-sm">
     <div class="cell">
-    <p>Total spent: £<%= sprintf('%.2f', @total_spent) %></p>
+    <p>Total spent: £<%= sprintf('%.2f', @total_spent) %> <i>(of £<%= sprintf('%.0f', @budget) %> budget)</i></p>
+
+    <div class="full_bar">
+      <table class="progress_bar" width="<%= @progress_bar%>%">
+        <tr>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+
     <p><a href="/transaction/new">Add Transaction</a></p>
     </div>
-    <div class="cell">
+    <div class="cell align_right">
     <p>Status: <%= @warning_message %></p>
-    <p><%= @days_to_payday%> days to payday</p>
+    <p><span class="payday"><%= @days_to_payday%></span> days to payday</p>
     </div>
   </div>
 </div>

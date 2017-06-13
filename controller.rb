@@ -88,10 +88,12 @@ end
 
 get '/transaction' do
   @days_to_payday = Transaction.days_to_payday()
+  @progress_bar = Transaction.progress_bar()
   @merchants = Merchant.all()
   @tags = Tag.all()
   @transactions = Transaction.all()
   @total_spent = Transaction.total_spent()
+  @budget = Transaction.budget()
   @warning_message = Transaction.warning()
   erb(:transaction_index)
 end

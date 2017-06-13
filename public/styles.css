@@ -31,7 +31,7 @@ p {
 }
 
 a {
-  color: #aa0000;
+  color: #7dc9e1;
   font-family: helvetica, verdana, sans-serif;
 }
 
@@ -108,18 +108,36 @@ nav {
 
 .dashboard p {
   color: #ffffff;
-  font-size: large;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 24px;
 }
 
 .dashboard a {
   color: #ffffff;
+  font-size: 18px;
+  font-weight: normal;
+
 }
 
 .logo {
   color: #ffffff;
   background-color: #8dd9f1;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 10px 14px;
+  border-radius: 5px;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.payday {
+  color: #aa0000;
+  background-color: #ffffff;
   margin-right: 5px;
   margin-left: 5px;
   padding: 10px 14px;
@@ -146,6 +164,19 @@ nav {
   border: 1px solid #6db9d1;
 }
 
+.full_bar {
+  display: inline-block;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 6px 3px 3px 3px;
+}
+
+.progress_bar {
+  display: inline-block;
+  background-color: #aa0000;
+  height: 24px;
+}
+
 .grid {
   border: 0px solid #caccb6;
 }
@@ -160,6 +191,10 @@ nav {
   border: 0px solid #caccb6;
   padding: 10px;
   min-height: 15vh;
+}
+
+.align_right {
+  text-align: right;
 }
 
 @media all and (min-width: 480px){
