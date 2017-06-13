@@ -1,8 +1,9 @@
-<p>Type: <%= @tag.type() %></p>
-<p>Amount spent by tag: £<%= @spent_by_tag %> </p> 
+<div class="main">
+  <p>Type: <%= @tag.type() %></p>
+  <p>Amount spent by tag: £<%= sprintf('%.2f', @spent_by_tag) %> </p> 
+  <p><a href="/tag/<%= @tag.id %>/edit">Edit Tag</a></p>
 
-<p><a href="/tag/<%= @tag.id %>/edit">Edit Tag</a></p>
-
-<form action="/tag/<%= @tag.id %>/delete" method="POST">
-  <input type="submit" value="Delete Tag">
-</form>
+  <form action="/tag/<%= @tag.id %>/delete" method="POST">
+    <input type="submit" value="Delete Tag">
+  </form>
+</div>

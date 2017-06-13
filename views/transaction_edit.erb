@@ -1,27 +1,29 @@
-<form action="/transaction/<%= @transaction.id%>" method="POST">
-  
-<label for="item">Item:</label>
-<input type="text" id="item" name="item" value="<%= @transaction.item%>">
+<div class="main">
+  <form action="/transaction/<%= @transaction.id%>" method="POST">
+    
+  <label for="item">Item:</label>
+  <input type="text" id="item" name="item" value="<%= @transaction.item%>">
 
-<label for="value">Value:</label>
-<input type="currency" id="value" name="value" value="<%= @transaction.value%>">
+  <label for="value">Value:</label>
+  <input type="currency" id="value" name="value" value="<%= sprintf('%.2f', @transaction.value)%>">
 
-<label for="merchant-select">Select a merchant:</label>
-<select name="merchant_id" id="merchant-select">
- <% for merchant in @merchants %>
-  <option value="<%= merchant.id %>"><%= merchant.name %></option>
- <% end %>
-</select>
+  <label for="merchant-select">Select a merchant:</label>
+  <select name="merchant_id" id="merchant-select">
+   <% for merchant in @merchants %>
+    <option value="<%= merchant.id %>"><%= merchant.name %></option>
+   <% end %>
+  </select>
 
-<label for="tag-select">Select a tag:</label>
-<select name="tag_id" id="tag-select">
- <% for tag in @tags %>
-  <option value="<%= tag.id %>"><%= tag.type %></option>
- <% end %>
-</select>
+  <label for="tag-select">Select a tag:</label>
+  <select name="tag_id" id="tag-select">
+   <% for tag in @tags %>
+    <option value="<%= tag.id %>"><%= tag.type %></option>
+   <% end %>
+  </select>
 
-<label for="date_of_transaction">Date:</label>
-<input type="date" id="date_of_transaction" name="date_of_transaction" value="<%= @transaction.date_of_transaction %>">
+  <label for="date_of_transaction">Date:</label>
+  <input type="date" id="date_of_transaction" name="date_of_transaction" value="<%= @transaction.date_of_transaction %>">
 
-  <input type="submit" value="Update Transaction">
-</form>
+    <input type="submit" value="Update Transaction">
+  </form>
+</div>

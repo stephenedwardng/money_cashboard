@@ -1,11 +1,13 @@
-<p>Item: <%= @transaction.item() %></p>
-<p>Value: £<%= sprintf('%.2f', @transaction.value()) %></p>
-<p>Merchant: <%= @transaction.merchant.name() %></p>
-<p>Tag: <%= @transaction.tag.type() %></p>
-<p>Date: <%= @transaction.format_date() %></p>
+<div class="main">
+  <p>Item: <%= @transaction.item() %></p>
+  <p>Value: £<%= sprintf('%.2f', @transaction.value()) %></p>
+  <p>Merchant: <%= @transaction.merchant.name() %></p>
+  <p>Tag: <%= @transaction.tag.type() %></p>
+  <p>Date: <%= @transaction.format_date() %></p>
 
-<p><a href="/transaction/<%= @transaction.id %>/edit">Edit Transaction</a></p>
+  <p><a href="/transaction/<%= @transaction.id %>/edit">Edit Transaction</a></p>
 
-<form action="/transaction/<%= @transaction.id %>/delete" method="POST">
-  <input type="submit" value="Delete Transaction">
-</form>
+  <form action="/transaction/<%= @transaction.id %>/delete" method="POST">
+    <input type="submit" value="Delete Transaction">
+  </form>
+</div>

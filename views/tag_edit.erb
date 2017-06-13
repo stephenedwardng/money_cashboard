@@ -1,7 +1,9 @@
-<form action="/tag/<%= @tag.id%>" method="POST">
-  
-<label for="type">Type:</label>
-<input type="text" id="type" name="type" value="<%= @tag.type%>">
+<div class="main">
+  <form action="/tag/<%= @tag.id%>" method="POST">
+    
+  <label for="type">Type:</label>
+  <input type="text" id="type" name="type" value="<%= @tag.type%>">
 
-  <input type="submit" value="Update Tag">
-</form>
+    <input type="submit" value="Update Tag">
+  </form>
+</div>

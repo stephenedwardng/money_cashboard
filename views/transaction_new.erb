@@ -1,29 +1,29 @@
 <div class="main">
-<form action="/transaction" method="post">
- <label for="item">Item:</label>
- <input type="text" id="item" name="item">
+  <form action="/transaction" method="post">
+   <label for="item">Item:</label>
+   <input type="text" id="item" name="item">
 
- <label for="value">Value:</label>
- <input type="currency" id="value" name="value">
- 
- <label for="merchant-select">Select a merchant:</label>
- <select name="merchant_id" id="merchant-select">
-  <% for merchant in @merchants %>
-   <option value="<%= merchant.id %>"><%= merchant.name %></option>
-  <% end %>
- </select>
+   <label for="value">Value:</label>
+   <input type="currency" id="value" name="value">
+   
+   <label for="merchant-select">Select a merchant:</label>
+   <select name="merchant_id" id="merchant-select">
+    <% for merchant in @merchants %>
+     <option value="<%= merchant.id %>"><%= merchant.name %></option>
+    <% end %>
+   </select>
 
- <label for="tag-select">Select a tag:</label>
- <select name="tag_id" id="tag-select">
-  <% for tag in @tags %>
-   <option value="<%= tag.id %>"><%= tag.type %></option>
-  <% end %>
- </select>
+   <label for="tag-select">Select a tag:</label>
+   <select name="tag_id" id="tag-select">
+    <% for tag in @tags %>
+     <option value="<%= tag.id %>"><%= tag.type %></option>
+    <% end %>
+   </select>
 
- <label for="date_of_transaction">Date:</label>
- <input type="date" id="date_of_transaction" name="date_of_transaction">
+   <label for="date_of_transaction">Date:</label>
+   <input type="date" id="date_of_transaction" name="date_of_transaction">
 
 
- <input type="submit" value="Add Transaction">
-</form>
+   <input type="submit" value="Add Transaction">
+  </form>
 </div>

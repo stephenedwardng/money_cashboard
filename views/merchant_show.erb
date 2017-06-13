@@ -1,7 +1,9 @@
-<p>Name: <%= @merchant.name() %></p>
+<div class="main">
+  <p>Name: <%= @merchant.name() %></p>
 
-<p><a href="/merchant/<%= @merchant.id %>/edit">Edit Merchant</a></p>
+  <p><a href="/merchant/<%= @merchant.id %>/edit">Edit Merchant</a></p>
 
-<form action="/merchant/<%= @merchant.id %>/delete" method="POST">
-  <input type="submit" value="Delete Merchant">
-</form>
+  <form action="/merchant/<%= @merchant.id %>/delete" method="POST">
+    <input type="submit" value="Delete Merchant">
+  </form>
+</div>
