@@ -31,7 +31,7 @@ class Merchant
   end
 
   def update(options)
-    sql = "UPDATE merchants SET (name) = ('#{@name}') WHERE id = #{@id};"
+    sql = "UPDATE merchants SET name = '#{options['name']}' WHERE id = '#{options['id']}';"
     SqlRunner.run(sql)
   end
 
