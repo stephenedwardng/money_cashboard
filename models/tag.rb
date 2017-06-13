@@ -30,11 +30,6 @@ class Tag
     return result
   end
 
-  # def update(options)
-  #   sql = "UPDATE tags SET (type) = ('#{@type}') WHERE id = #{@id};"
-  #   SqlRunner.run(sql)
-  # end
-
   def update(options)
     sql = "UPDATE tags SET type = '#{options['type']}' WHERE id = '#{options['id']}';"
     SqlRunner.run(sql)
