@@ -1,8 +1,18 @@
 <div class="dashboard">
-  <p>Total spent: £<%= sprintf('%.2f', @total_spent) %></p>
-  <p>Status: <%= @warning_message %></p>
-  <p><a href="/transaction/new">Add Transaction</a></p>
-  <p><%= @days_to_payday%> days to payday</p>
+
+<div class="grid">
+   <div class="grid-row grid-row-sm">
+    <div class="cell">
+    <p>Total spent: £<%= sprintf('%.2f', @total_spent) %></p>
+    <p><a href="/transaction/new">Add Transaction</a></p>
+    </div>
+    <div class="cell">
+    <p>Status: <%= @warning_message %></p>
+    <p><%= @days_to_payday%> days to payday</p>
+    </div>
+  </div>
+</div>
+
 </div>
 
 <div class="main">

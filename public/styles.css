@@ -31,7 +31,7 @@ p {
 }
 
 a {
-  color: #7dc9e1;
+  color: #aa0000;
   font-family: helvetica, verdana, sans-serif;
 }
 
@@ -110,6 +110,7 @@ nav {
   color: #ffffff;
   font-size: large;
   font-weight: bold;
+  font-size: 24px;
 }
 
 .dashboard a {
