@@ -2,6 +2,7 @@ require_relative('../db/sql_runner')
 require_relative('./merchant')
 require_relative('./tag')
 require('date')
+require('pry-byebug')
 
 class Transaction
 
@@ -166,5 +167,23 @@ class Transaction
     return result
   end
 
+  def self.days_to_payday()
+    days_in_month = 31
+    current_month = Date.today().mon()
+
+    if (current_month == 1 ||
+      current_month == 3 ||
+      current_month == 5 ||
+      current_month == 7 ||
+      current_month == 8 ||
+      current_month == 10 ||
+      current_month == 12)
+    days_in_month = 31
+    else
+    days_in_month = 30
+    end
+
+    return days_in_month -= Date.today().mday()
+  end
 
 end

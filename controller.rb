@@ -87,6 +87,7 @@ end
 # Transaction routes
 
 get '/transaction' do
+  @days_to_payday = Transaction.days_to_payday()
   @merchants = Merchant.all()
   @tags = Tag.all()
   @transactions = Transaction.all()
