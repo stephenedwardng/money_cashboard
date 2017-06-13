@@ -131,6 +131,8 @@ post '/transaction/:id/delete' do
   redirect to "/transaction"
 end
 
+# month routes
+
 get '/month' do
   @transactions_by_month = Transaction.all_by_month()
   @merchants = Merchant.all()
@@ -138,4 +140,13 @@ get '/month' do
   @transactions = Transaction.all()
   @total_spent = Transaction.total_spent()
   erb(:transaction_by_month)
+end
+
+get '/month/:month' do
+  @transactions_by_month = Transaction.all_by_month(params[:month])
+  @merchants = Merchant.all()
+  @tags = Tag.all()
+  @transactions = Transaction.all()
+  @total_spent = Transaction.total_spent()
+  erb(:month_show)
 end
