@@ -138,6 +138,56 @@ Tag.delete_all()
 
 @transaction7.save()
 
+@transaction8 = Transaction.new({
+  'item' => 'Album',
+  'value' => 15,
+  'merchant_id' => @merchant5.id,
+  'tag_id' => @tag5.id,
+  'date_of_transaction' => '2017-02-14'
+  })
+
+@transaction8.save()
+
+@transaction9 = Transaction.new({
+  'item' => 'Book',
+  'value' => 150,
+  'merchant_id' => @merchant5.id,
+  'tag_id' => @tag5.id,
+  'date_of_transaction' => '2017-03-24'
+  })
+
+@transaction9.save()
+
+@transaction10 = Transaction.new({
+  'item' => 'Car MOT',
+  'value' => 300,
+  'merchant_id' => @merchant4.id,
+  'tag_id' => @tag4.id,
+  'date_of_transaction' => '2017-04-14'
+  })
+
+@transaction10.save()
+
+@transaction11 = Transaction.new({
+  'item' => 'Oranges',
+  'value' => 240,
+  'merchant_id' => @merchant1.id,
+  'tag_id' => @tag1.id,
+  'date_of_transaction' => '2017-06-14'
+  })
+
+@transaction11.save()
+
+@transaction12 = Transaction.new({
+  'item' => 'Jacket',
+  'value' => 180,
+  'merchant_id' => @merchant2.id,
+  'tag_id' => @tag2.id,
+  'date_of_transaction' => '2017-06-10'
+  })
+
+@transaction12.save()
+
 binding.pry()
 nil
 
