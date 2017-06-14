@@ -70,20 +70,20 @@ Tag.delete_all()
 
 @transaction1 = Transaction.new({
   'item' => 'Pie',
-  'value' => 60,
+  'value' => 4,
   'merchant_id' => @merchant1.id,
   'tag_id' => @tag1.id,
-  'date_of_transaction' => '2017-06-11'
+  'date_of_transaction' => '2017-01-11'
   })
 
 @transaction1.save()
 
 @transaction2 = Transaction.new({
   'item' => 'Jeans',
-  'value' => 30,
+  'value' => 75,
   'merchant_id' => @merchant2.id,
   'tag_id' => @tag2.id,
-  'date_of_transaction' => '2017-05-15'
+  'date_of_transaction' => '2017-01-15'
   })
 
 @transaction2.save()
@@ -93,17 +93,17 @@ Tag.delete_all()
   'value' => 80,
   'merchant_id' => @merchant3.id,
   'tag_id' => @tag3.id,
-  'date_of_transaction' => '2017-05-06'
+  'date_of_transaction' => '2017-02-06'
   })
 
 @transaction3.save()
 
 @transaction4 = Transaction.new({
   'item' => 'Pen',
-  'value' => 50,
-  'merchant_id' => @merchant4.id,
-  'tag_id' => @tag4.id,
-  'date_of_transaction' => '2017-06-08'
+  'value' => 260,
+  'merchant_id' => @merchant2.id,
+  'tag_id' => @tag5.id,
+  'date_of_transaction' => '2017-03-08'
   })
 
 @transaction4.save()
@@ -111,12 +111,32 @@ Tag.delete_all()
 @transaction5 = Transaction.new({
   'item' => 'Pizza',
   'value' => 10,
-  'merchant_id' => @merchant5.id,
-  'tag_id' => @tag5.id,
+  'merchant_id' => @merchant1.id,
+  'tag_id' => @tag1.id,
   'date_of_transaction' => '2017-04-20'
   })
 
 @transaction5.save()
+
+@transaction6 = Transaction.new({
+  'item' => 'Cup',
+  'value' => 5,
+  'merchant_id' => @merchant2.id,
+  'tag_id' => @tag3.id,
+  'date_of_transaction' => '2017-05-04'
+  })
+
+@transaction6.save()
+
+@transaction7 = Transaction.new({
+  'item' => 'Paper',
+  'value' => 4,
+  'merchant_id' => @merchant2.id,
+  'tag_id' => @tag5.id,
+  'date_of_transaction' => '2017-06-04'
+  })
+
+@transaction7.save()
 
 binding.pry()
 nil
