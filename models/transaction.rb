@@ -91,7 +91,11 @@ class Transaction
 
   def self.progress_bar()
     progress_bar =  (total_spent().to_f / budget().to_f) * 100
-    return progress_bar.to_i
+    if progress_bar.to_i <= 100
+      return progress_bar.to_i
+    else
+      return 100
+    end
   end
 
   def self.warning()
