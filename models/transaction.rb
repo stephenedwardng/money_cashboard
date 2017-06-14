@@ -38,11 +38,6 @@ class Transaction
     return result
   end
 
-  # def update(options)
-  #   sql = "UPDATE tags SET (item, value, merchant_id, tag_id, date_of_transaction) = ('#{@item}', #{@value}, #{merchant_id}, #{tag_id}, '#{date_of_transaction}') WHERE id = #{@id};"
-  #   SqlRunner.run(sql)
-  # end
-
   def update(options)
     sql = "UPDATE transactions 
     SET (item, value, merchant_id, tag_id, date_of_transaction) = ('#{options['item']}', #{options['value']}, '#{options['merchant_id']}', '#{options['tag_id']}', '#{options['date_of_transaction']}') 
