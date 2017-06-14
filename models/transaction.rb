@@ -176,6 +176,15 @@ class Transaction
     return result
   end
 
+  def self.savings(month)
+    sql = "SELECT SUM(value) FROM transactions
+    WHERE EXTRACT (month from date_of_transaction)=#{month};"
+    transactions = SqlRunner.run(sql)
+    savings = budget().to_f 
+    savings -= transactions[0]['sum'].to_f
+    return savings
+  end
+
   def self.days_to_payday()
     days_in_month = 31
     current_month = Date.today().mon()

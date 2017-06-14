@@ -147,6 +147,7 @@ end
 
 get '/month/:month' do
   @transactions_by_month = Transaction.all_by_month(params[:month])
+  @savings = Transaction.savings(params[:month])
   @merchants = Merchant.all()
   @tags = Tag.all()
   @transactions = Transaction.all()
