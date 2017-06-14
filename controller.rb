@@ -95,6 +95,7 @@ get '/transaction' do
   @total_spent = Transaction.total_spent()
   @budget = Transaction.budget()
   @warning_message = Transaction.warning()
+  @current_month_url = Transaction.current_month_url()
   erb(:transaction_index)
 end
 

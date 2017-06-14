@@ -79,9 +79,10 @@ class Transaction
   end
 
   def self.total_spent()
+    current_month = Date.today().mon()
     sql = "SELECT SUM(value)
       FROM transactions
-      WHERE EXTRACT (month from date_of_transaction)=6;"
+      WHERE EXTRACT (month from date_of_transaction)=#{current_month};"
     total = SqlRunner.run(sql)
     return total[0]['sum']
   end
@@ -203,6 +204,10 @@ class Transaction
     end
 
     return days_in_month -= Date.today().mday()
+  end
+
+  def self.current_month_url()
+    Date.today().mon()
   end
 
 end
