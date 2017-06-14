@@ -80,7 +80,8 @@ class Transaction
 
   def self.total_spent()
     sql = "SELECT SUM(value)
-      FROM transactions;"
+      FROM transactions
+      WHERE EXTRACT (month from date_of_transaction)=6;"
     total = SqlRunner.run(sql)
     return total[0]['sum']
   end

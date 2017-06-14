@@ -70,7 +70,7 @@ Tag.delete_all()
 
 @transaction1 = Transaction.new({
   'item' => 'Pie',
-  'value' => 4,
+  'value' => 450,
   'merchant_id' => @merchant1.id,
   'tag_id' => @tag1.id,
   'date_of_transaction' => '2017-01-11'
@@ -90,7 +90,7 @@ Tag.delete_all()
 
 @transaction3 = Transaction.new({
   'item' => 'Electricity',
-  'value' => 80,
+  'value' => 800,
   'merchant_id' => @merchant3.id,
   'tag_id' => @tag3.id,
   'date_of_transaction' => '2017-02-06'
@@ -110,7 +110,7 @@ Tag.delete_all()
 
 @transaction5 = Transaction.new({
   'item' => 'Pizza',
-  'value' => 10,
+  'value' => 100,
   'merchant_id' => @merchant1.id,
   'tag_id' => @tag1.id,
   'date_of_transaction' => '2017-04-20'
@@ -120,7 +120,7 @@ Tag.delete_all()
 
 @transaction6 = Transaction.new({
   'item' => 'Cup',
-  'value' => 5,
+  'value' => 500,
   'merchant_id' => @merchant2.id,
   'tag_id' => @tag3.id,
   'date_of_transaction' => '2017-05-04'
@@ -130,7 +130,7 @@ Tag.delete_all()
 
 @transaction7 = Transaction.new({
   'item' => 'Paper',
-  'value' => 4,
+  'value' => 400,
   'merchant_id' => @merchant2.id,
   'tag_id' => @tag5.id,
   'date_of_transaction' => '2017-06-04'
